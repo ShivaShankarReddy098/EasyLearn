@@ -1,9 +1,12 @@
 // import { useState } from "react";
 // import { Dialog, DialogPanel } from "@headlessui/react";
 // import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 import HomeSection from "../components/HomeSection";
 import NavBar from "../components/NavBar";
+import Plans from "./Plans";
+import NewsletterSection from "../components/NewsletterSection";
+import About from "./About";
 
 // const navigation = [
 //   { name: "Categories", href: "#" },
@@ -19,7 +22,10 @@ export default function Home() {
     <div className="bg-white">
       <NavBar />
       <HomeSection />
-      <Footer />
+      <Plans />
+      <About />
+      <NewsletterSection />
+      {/* <Footer /> */}
     </div>
   );
 }

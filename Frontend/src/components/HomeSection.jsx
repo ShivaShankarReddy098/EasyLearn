@@ -1,4 +1,7 @@
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function HomeSection() {
+  const notify = () => toast("Successfully Email Added");
   return (
     <>
       <div className="relative isolate px-6 pt-14 lg:px-8">
@@ -17,11 +20,14 @@ function HomeSection() {
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-              Announcing our next Features.{" "}
-              <a href="#" className="font-semibold text-indigo-600">
+              Announcing Our Next Features To Your Email.{" "}
+              <button
+                onClick={notify}
+                className="font-semibold text-indigo-600"
+              >
                 <span className="absolute inset-0" aria-hidden="true" />
-                Read more <span aria-hidden="true">&rarr;</span>
-              </a>
+                Send To Email <span aria-hidden="true">&rarr;</span>
+              </button>
             </div>
           </div>
           <div className="text-center">
@@ -66,6 +72,7 @@ function HomeSection() {
           />
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 }

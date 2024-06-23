@@ -1,30 +1,33 @@
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { NavLink } from "react-router-dom";
 const navigation = [
-  { name: "Categories", href: "#" },
-  { name: "Plans&Pricing", href: "#" },
-  { name: "EasyLearn Business", href: "#" },
-  { name: "AboutUs", href: "#" },
+  { name: "Categories", href: "/categories" },
+  { name: "Plans&Pricing", href: "/plans" },
+  { name: "EasyLearn Business", href: "/business" },
+  { name: "AboutUs", href: "/about" },
 ];
 function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <>
-      <header className="absolute inset-x-0 top-0 z-50">
+      <header className="fixed inset-x-0 top-0 z-50 bg-slate-300 border-gray-700 rounded-xl ml-2 mr-2 mt-1">
         <nav
           className="flex items-center justify-between p-6 lg:px-8"
           aria-label="Global"
         >
           <div className="flex lg:flex-1 ">
-            <a href="#" className="-m-1.5 p-1.5 flex gap-3">
+            <NavLink to="/" className="-m-1.5 p-1.5 flex gap-3">
               <img
                 className="h-8 w-auto"
                 src="/EasyLearn_logo_Main.png"
                 alt=""
               />
-              <span className=" text-gray-700 font-extrabold">EasyLearn</span>
-            </a>
+              <span className=" text-gray-700 font-extrabold hover:text-gray-500">
+                EasyLearn
+              </span>
+            </NavLink>
           </div>
           <div className="flex lg:hidden">
             <button
@@ -38,22 +41,22 @@ function NavBar() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a
+              <NavLink
                 key={item.name}
-                href={item.href}
-                className="text-sm font-semibold leading-6 text-gray-900"
+                to={item.href}
+                className="text-sm font-mono font-bold leading-6 text-gray-900 hover:text-gray-500"
               >
                 {item.name}
-              </a>
+              </NavLink>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a
-              href="#"
-              className="text-sm font-semibold leading-6 text-gray-900"
+            <NavLink
+              to="/login"
+              className="text-sm font-mono font-bold leading-6 text-gray-900 hover:text-gray-500"
             >
               Log in <span aria-hidden="true">&rarr;</span>
-            </a>
+            </NavLink>
           </div>
         </nav>
         <Dialog
@@ -88,7 +91,7 @@ function NavBar() {
                     <a
                       key={item.name}
                       href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-mono font-bold leading-7 text-gray-900 hover:bg-gray-50"
                     >
                       {item.name}
                     </a>
