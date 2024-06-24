@@ -4,7 +4,6 @@ import Categories from "./pages/Categories";
 import Plans from "./pages/Plans";
 import Error from "./pages/Error";
 import RootLayout from "./components/RootLayout";
-import Business from "./pages/Business";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
@@ -29,10 +28,6 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
-      },
-      {
-        path: "/business",
-        element: <Business />,
       },
       {
         path: "/login",

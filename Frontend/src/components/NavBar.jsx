@@ -2,14 +2,18 @@ import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
+import Categories_Dialoag from "@/utils/Categories_Dialoag";
+import SearchBar from "./SeachBar";
+import SearchtResultsList from "./SearchResultsList";
+
 const navigation = [
-  { name: "Categories", href: "/categories" },
+  { name: <Categories_Dialoag />, href: "/categories" },
   { name: "Plans&Pricing", href: "/plans" },
-  { name: "EasyLearn Business", href: "/business" },
   { name: "AboutUs", href: "/about" },
 ];
 function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [results, setResults] = useState([]);
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-50 bg-slate-300 border-gray-700 rounded-xl ml-2 mr-2 mt-1">
@@ -40,6 +44,10 @@ function NavBar() {
             </button>
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
+            <div className="search-bar-container">
+              <SearchBar mainResults={setResults} />
+              <SearchtResultsList results={results} />
+            </div>
             {navigation.map((item) => (
               <NavLink
                 key={item.name}
