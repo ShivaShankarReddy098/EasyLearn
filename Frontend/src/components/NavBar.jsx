@@ -16,19 +16,19 @@ function NavBar() {
   const [results, setResults] = useState([]);
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 bg-slate-300 border-gray-700 rounded-xl ml-2 mr-2 mt-1">
+      <header className="fixed inset-x-0 top-0 z-50 bg-slate-300 border-gray-700 rounded-xl ml-2 mr-2 mt-1 ">
         <nav
-          className="flex items-center justify-between p-6 lg:px-8"
+          className="flex items-center justify-between p-6 lg:px-8 "
           aria-label="Global"
         >
-          <div className="flex lg:flex-1 ">
-            <NavLink to="/" className="-m-1.5 p-1.5 flex gap-3">
+          <div className="flex lg:flex-1 justify-center lg:-ml-10 lg:mr-20 ">
+            <NavLink to="/" className="-m-1.5 p-1.5 flex gap-3 ">
               <img
                 className="h-8 w-auto"
                 src="/EasyLearn_logo_Main.png"
                 alt=""
               />
-              <span className=" text-gray-700 font-extrabold hover:text-gray-500">
+              <span className=" text-gray-700 font-extrabold hover:text-gray-500 ">
                 EasyLearn
               </span>
             </NavLink>
@@ -43,16 +43,16 @@ function NavBar() {
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12">
-            <div className="search-bar-container">
+          <div className="hidden lg:flex lg:gap-x-12 lg:items-center lg:-mt-1 lg:-ml-8 ">
+            <div className="search-bar-container ">
               <SearchBar mainResults={setResults} />
-              <SearchtResultsList results={results} />
             </div>
+            {/* <SearchtResultsList results={results} /> */}
             {navigation.map((item) => (
               <NavLink
                 key={item.name}
                 to={item.href}
-                className="text-sm font-mono font-bold leading-6 text-gray-900 hover:text-gray-500"
+                className="text-sm font-mono font-bold leading-6 text-gray-900 hover:text-gray-500 lg:items-center "
               >
                 {item.name}
               </NavLink>
@@ -61,9 +61,9 @@ function NavBar() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <NavLink
               to="/login"
-              className="text-sm font-mono font-bold leading-6 text-gray-900 hover:text-gray-500"
+              className="text-sm font-mono font-bold leading-6 text-gray-900 hover:text-gray-500 lg:items-center lg:-mt-1 lg:-ml-[120px] "
             >
-              Log in <span aria-hidden="true">&rarr;</span>
+              Login <span aria-hidden="true">&rarr;</span>
             </NavLink>
           </div>
         </nav>
@@ -79,7 +79,7 @@ function NavBar() {
                 <span className="text-gray-700 font-extrabold">EasyLearn</span>
                 <img
                   className="h-8 w-auto"
-                  src="/Screenshot 2024-06-22 094823.png"
+                  src="/EasyLearn_logo_Main.png"
                   alt=""
                 />
               </a>
@@ -110,7 +110,7 @@ function NavBar() {
                     href="#"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
-                    Log in
+                    Login
                   </a>
                 </div>
               </div>
@@ -118,6 +118,7 @@ function NavBar() {
           </DialogPanel>
         </Dialog>
       </header>
+      <SearchtResultsList results={results} />
     </>
   );
 }
