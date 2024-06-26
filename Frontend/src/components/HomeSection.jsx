@@ -1,7 +1,13 @@
+import Cookies from "@/utils/Cookies";
+import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function HomeSection() {
   const notify = () => toast("Successfully Email Added");
+  const [display, setDisplay] = useState(false);
+  setTimeout(() => {
+    setDisplay(true);
+  }, 5000);
   return (
     <>
       <div className="relative bottom-10 isolate px-6  lg:px-8">
@@ -72,6 +78,7 @@ function HomeSection() {
           />
         </div>
       </div>
+      {display && <Cookies />}
       <ToastContainer />
     </>
   );

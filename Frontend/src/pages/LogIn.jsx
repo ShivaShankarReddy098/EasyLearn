@@ -1,4 +1,10 @@
+// import { Link } from "react-router-dom";
+
+import { NavLink } from "react-router-dom";
+
 function LogIn() {
+  // var username = document.getElementById("username").value;
+
   return (
     <>
       <div className=" justify-center flex h-full w-full lg: p-3">
@@ -67,12 +73,12 @@ function LogIn() {
                     </label>
                   </div>
                   <div>
-                    <a
-                      href="#"
+                    <NavLink
+                      to="/forgetPassword"
                       className="text-sm font-mono text-red-600 hover:text-red-400"
                     >
                       Forgot password ?
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
                 <div className="my-4">

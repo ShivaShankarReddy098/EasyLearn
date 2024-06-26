@@ -2,7 +2,7 @@ import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 
 export default function ProfileUpdate() {
   return (
-    <form>
+    <form className="lg:p-10 lg:pt-20 font-mono">
       <div className="space-y-12">
         <div className="border-b border-gray-900/10 pb-12">
           <h2 className="text-base font-semibold leading-7 text-gray-900">
@@ -23,16 +23,13 @@ export default function ProfileUpdate() {
               </label>
               <div className="mt-2">
                 <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
-                  <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">
-                    workcation.com/
-                  </span>
                   <input
                     type="text"
                     name="username"
                     id="username"
                     autoComplete="username"
                     className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                    placeholder="janesmith"
+                    placeholder="XYZ"
                   />
                 </div>
               </div>
@@ -59,7 +56,7 @@ export default function ProfileUpdate() {
               </p>
             </div>
 
-            <div className="col-span-full">
+            {/* <div className="col-span-full">
               <label
                 htmlFor="photo"
                 className="block text-sm font-medium leading-6 text-gray-900"
@@ -78,14 +75,14 @@ export default function ProfileUpdate() {
                   Change
                 </button>
               </div>
-            </div>
+            </div> */}
 
             <div className="col-span-full">
               <label
                 htmlFor="cover-photo"
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
-                Cover photo
+                photo
               </label>
               <div className="mt-2 flex justify-center rounded-lg border border-dashed border-gray-900/25 px-6 py-10">
                 <div className="text-center">
@@ -194,9 +191,10 @@ export default function ProfileUpdate() {
                   autoComplete="country-name"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
                 >
+                  <option>India</option>
+                  <option>Argentina</option>
+                  <option>Portugal</option>
                   <option>United States</option>
-                  <option>Canada</option>
-                  <option>Mexico</option>
                 </select>
               </div>
             </div>
@@ -257,17 +255,17 @@ export default function ProfileUpdate() {
 
             <div className="sm:col-span-2">
               <label
-                htmlFor="postal-code"
+                htmlFor="phoneNumber"
                 className="block text-sm font-medium leading-6 text-gray-900"
               >
-                ZIP / Postal code
+                Phone Number
               </label>
               <div className="mt-2">
                 <input
-                  type="text"
-                  name="postal-code"
-                  id="postal-code"
-                  autoComplete="postal-code"
+                  type="number"
+                  name="phoneNumber"
+                  id="phoneNumber"
+                  autoComplete="phoneNumber"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
@@ -296,7 +294,7 @@ export default function ProfileUpdate() {
                       id="comments"
                       name="comments"
                       type="checkbox"
-                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                      className="h-4 w-4 rounded ring-2 border-gray-300 text-indigo-600 focus:ring-indigo-600"
                     />
                   </div>
                   <div className="text-sm leading-6">
@@ -307,28 +305,7 @@ export default function ProfileUpdate() {
                       Comments
                     </label>
                     <p className="text-gray-500">
-                      Get notified when someones posts a comment on a posting.
-                    </p>
-                  </div>
-                </div>
-                <div className="relative flex gap-x-3">
-                  <div className="flex h-6 items-center">
-                    <input
-                      id="candidates"
-                      name="candidates"
-                      type="checkbox"
-                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                    />
-                  </div>
-                  <div className="text-sm leading-6">
-                    <label
-                      htmlFor="candidates"
-                      className="font-medium text-gray-900"
-                    >
-                      Candidates
-                    </label>
-                    <p className="text-gray-500">
-                      Get notified when a candidate applies for a job.
+                      Get notified when someones posts a comment on a courses.
                     </p>
                   </div>
                 </div>
@@ -338,7 +315,7 @@ export default function ProfileUpdate() {
                       id="offers"
                       name="offers"
                       type="checkbox"
-                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                      className="h-4 w-4 ring-2 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
                     />
                   </div>
                   <div className="text-sm leading-6">
@@ -349,7 +326,7 @@ export default function ProfileUpdate() {
                       Offers
                     </label>
                     <p className="text-gray-500">
-                      Get notified when a candidate accepts or rejects an offer.
+                      Get notified when a new offers are available.
                     </p>
                   </div>
                 </div>
@@ -368,7 +345,7 @@ export default function ProfileUpdate() {
                     id="push-everything"
                     name="push-notifications"
                     type="radio"
-                    className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                    className="h-4 w-4 ring-2 border-gray-300 text-indigo-600 focus:ring-indigo-600"
                   />
                   <label
                     htmlFor="push-everything"
@@ -382,7 +359,7 @@ export default function ProfileUpdate() {
                     id="push-email"
                     name="push-notifications"
                     type="radio"
-                    className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                    className="h-4 w-4 ring-2 border-gray-300 text-indigo-600 focus:ring-indigo-600"
                   />
                   <label
                     htmlFor="push-email"
@@ -396,7 +373,7 @@ export default function ProfileUpdate() {
                     id="push-nothing"
                     name="push-notifications"
                     type="radio"
-                    className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
+                    className="h-4 w-4 ring-2 border-gray-300 text-indigo-600 focus:ring-indigo-600"
                   />
                   <label
                     htmlFor="push-nothing"

@@ -3,10 +3,12 @@ import About from "./pages/About";
 import Categories from "./pages/Categories";
 import Plans from "./pages/Plans";
 import Error from "./pages/Error";
+import ProfileUpdate from "./utils/ProfileUpdate";
 import RootLayout from "./components/RootLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
+import ForgetPassword from "./utils/ForgetPassword";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/updateProfile",
+        element: <ProfileUpdate />,
+      },
+      {
+        path: "/forgetPassword",
+        element: <ForgetPassword />,
       },
       {
         path: "/login",

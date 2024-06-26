@@ -7,9 +7,9 @@ export default function ThoughtSection() {
         <img className="mx-auto h-12" src="EasyLearn_logo_Main.png" alt="" />
         <figure className="mt-10">
           <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
-            <p>
+            <p className=" font-mono">
               “Navu Namge Olledu Madidre Devru E Bere Study Platform Heke
-              Aste,Enantira Aste . ”
+              Aste,Enantira Aste.”
             </p>
           </blockquote>
           <figcaption className="mt-10">
