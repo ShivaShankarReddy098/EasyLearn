@@ -127,7 +127,7 @@ const COURSES = [
       count: "298,000",
       stars: "⭐⭐⭐⭐",
     },
-    amount: "11",
+    amount: "12",
   },
   {
     id: "7",

@@ -1,5 +1,5 @@
 import "flowbite";
-function Componies() {
+function Companies() {
   return (
     <>
       <div
@@ -209,4 +209,4 @@ function Componies() {
     </>
   );
 }
-export default Componies;
+export default Companies;

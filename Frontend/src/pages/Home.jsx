@@ -11,7 +11,7 @@ import About from "./About";
 import FeedBack from "@/components/FeedBack";
 import Contact from "@/components/Contact";
 import Information from "@/components/Information";
-import Componies from "@/components/Componies";
+import Companies from "@/components/Companies";
 import Categories from "./Categories";
 
 // const navigation = [
@@ -29,7 +29,7 @@ export default function Home() {
       <NavBar />
       <HomeSection />
       <Information />
-      <Componies />
+      <Companies />
       <Categories />
       <Plans />
       <FeedBack />
