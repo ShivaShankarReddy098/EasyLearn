@@ -9,7 +9,7 @@ import Profile from "@/pages/Profile";
 
 const navigation = [
   { name: <Categories_Dialoag />, href: "/categories" },
-  { name: "Plans&Pricing", href: "/plans" },
+  { name: "Plans & Pricing", href: "/plans" },
   { name: "AboutUs", href: "/about" },
 ];
 function NavBar() {
@@ -17,13 +17,13 @@ function NavBar() {
   const [results, setResults] = useState([]);
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 bg-slate-300 border-gray-700 rounded-xl ml-2 mr-2 mt-1 ">
+      <header className="fixed  inset-x-0 top-0 z-50 bg-slate-300 border-gray-700 rounded-xl ml-2 mr-2 mt-2 ">
         <nav
           className="flex items-center justify-between p-6 lg:px-8 "
           aria-label="Global"
         >
           <div className="flex lg:flex-1 justify-center lg:-ml-10 lg:mr-20 ">
-            <NavLink to="/" className="-m-1.5 p-1.5 flex gap-3 ">
+            <a href="/" className="-m-1.5 p-1.5 flex gap-3 ">
               <img
                 className="h-8 w-auto"
                 src="/EasyLearn_logo_Main.png"
@@ -32,7 +32,7 @@ function NavBar() {
               <span className=" text-gray-700 font-extrabold hover:text-gray-500 ">
                 EasyLearn
               </span>
-            </NavLink>
+            </a>
           </div>
           <div className="flex lg:hidden">
             <button
@@ -53,7 +53,7 @@ function NavBar() {
               <NavLink
                 key={item.name}
                 to={item.href}
-                className="text-sm font-mono font-bold leading-6 text-gray-900 hover:text-gray-500 lg:items-center "
+                className="text-sm  font-bold leading-6 text-gray-900 hover:text-gray-500 lg:items-center "
               >
                 {item.name}
               </NavLink>

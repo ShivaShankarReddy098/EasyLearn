@@ -2,7 +2,7 @@ function Information() {
   return (
     <>
       <section>
-        <div className="py-16">
+        <div className="py-16 font-mono bg-slate-700 mb-10 mt-10">
           <div className="mx-auto px-6 max-w-6xl text-gray-500">
             <div className="relative">
               <div className="relative z-10 grid gap-3 grid-cols-6">
@@ -89,7 +89,7 @@ function Information() {
                       </svg>
                     </div>
                     <div className="mt-6 text-center relative z-10 space-y-2">
-                      <h2 className="text-lg font-medium text-gray-800 transition group-hover:text-purple-950 dark:text-white">
+                      <h2 className="text-lg font-bold text-gray-900 transition group-hover:text-purple-950 dark:text-white">
                         Secure Data
                       </h2>
                       <p className="dark:text-gray-300 text-gray-700">
@@ -185,7 +185,7 @@ function Information() {
                       </svg>
                     </div>
                     <div className="mt-14 text-center relative z-10 space-y-2">
-                      <h2 className="text-lg font-medium text-gray-800 transition group-hover:text-purple-950 dark:text-white">
+                      <h2 className="text-lg font-bold text-gray-900 transition group-hover:text-purple-950 dark:text-white">
                         Faster than light
                       </h2>
                       <p className="dark:text-gray-300 text-gray-700">
@@ -215,7 +215,7 @@ function Information() {
                         </svg>
                       </div>
                       <div className="space-y-2">
-                        <h2 className="text-lg font-medium text-gray-800 transition group-hover:text-purple-950 dark:text-white">
+                        <h2 className="text-lg font-bold text-gray-900 transition group-hover:text-purple-950 dark:text-white">
                           Faster growing platform
                         </h2>
                         <p className="dark:text-gray-300 text-gray-700">
@@ -298,7 +298,7 @@ function Information() {
                         </svg>
                       </div>
                       <div className="space-y-2">
-                        <h2 className="text-lg font-medium text-gray-800 transition group-hover:text-purple-950 dark:text-white">
+                        <h2 className="text-lg font-bold text-gray-900 transition group-hover:text-purple-950 dark:text-white">
                           Keep your loved ones safe
                         </h2>
                         <p className="dark:text-gray-300 text-gray-700">

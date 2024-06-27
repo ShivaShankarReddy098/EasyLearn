@@ -4,49 +4,119 @@ function Componies() {
     <>
       <div
         id="default-carousel"
-        className="relative w-full"
+        className="relative w-full  bg-slate-100 rounded-2xl"
         data-carousel="slide"
       >
-        <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
+        <h1 className=" font-mono text-center pt-2">
+          Trusted by over 12,000 companies and millions of learners around the
+          world
+        </h1>
+        <div className="relative overflow-hidden rounded-lg md:h-40">
+          <div
+            className="flex flex-row duration-500 ease transition-all"
+            data-carousel-item
+          >
             <img
-              src="https://images.unsplash.com/photo-1719175190794-c9067ca34d69?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8"
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              src="Apple-removebg-preview.png"
+              className=" w-1/4  p-2 "
+              alt="..."
+            />
+            <img src="Amazon.png" className="w-1/4 p-2 " alt="..." />
+            <img
+              src="Audi-removebg-preview.png"
+              className="w-1/4 p-2 "
+              alt="..."
+            />
+            <img
+              src="BMW-removebg-preview.png"
+              className=" w-1/4 p-2 "
               alt="..."
             />
           </div>
-
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
+          <div
+            className="flex flex-row duration-500 ease transition-all"
+            data-carousel-item
+          >
             <img
-              src="https://images.unsplash.com/photo-1719165626474-c7cbb9c6416b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHx8"
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              src="CocaCola-removebg-preview.png"
+              className="w-1/4 p-2"
+              alt="..."
+            />
+            <img
+              src="Ford-removebg-preview.png"
+              className=" w-1/4 p-2"
+              alt="..."
+            />
+            <img
+              src="IBM-removebg-preview.png"
+              className="block w-1/4 p-2 "
+              alt="..."
+            />
+            <img
+              src="Lego-removebg-preview.png"
+              className="  block  w-1/4 p-2 "
               alt="..."
             />
           </div>
-
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
+          <div
+            className="flex flex-row duration-500 ease transition-all"
+            data-carousel-item
+          >
             <img
-              src="https://media.istockphoto.com/id/669992822/photo/graduate-put-her-hands-up-and-celebrating-with-certificate-in-her-hand-and-feeling-so.webp?b=1&s=170667a&w=0&k=20&c=Lod_8EnVtVQMhOv5fDnn_hlxsn2WflmPnXKy193FqhA="
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              src="MasterCard-removebg-preview.png"
+              className="w-1/4 p-2"
+              alt="..."
+            />
+            <img
+              src="McDonald_s-removebg-preview.png"
+              className=" w-1/4 p-2"
+              alt="..."
+            />
+            <img
+              src="Michelin-removebg-preview.png"
+              className="block w-1/4 p-2 "
+              alt="..."
+            />
+            <img
+              src="Microsoft-removebg-preview.png"
+              className="  block  w-1/4 p-2 "
               alt="..."
             />
           </div>
-
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
+          <div
+            className="flex flex-row duration-500 ease transition-all"
+            data-carousel-item
+          >
             <img
-              src="https://media.istockphoto.com/id/665434722/photo/close-up-view-of-graduation-mortarboard-diploma-and-us-flag-on-white-education-concept.webp?b=1&s=170667a&w=0&k=20&c=pk7v14BsSVAv_xKuhdU-WZuMyVSbLInUfE4D9flCXPM="
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              src="Nasa-removebg-preview.png"
+              className="w-1/4 p-2"
+              alt="..."
+            />
+            <img
+              src="Nike-removebg-preview.png"
+              className=" w-1/4 p-2"
+              alt="..."
+            />
+            <img
+              src="Pepsi-removebg-preview.png"
+              className="block w-1/4 p-2 "
+              alt="..."
+            />
+            <img
+              src="Rolex-removebg-preview.png"
+              className="  block  w-1/4 p-2 "
               alt="..."
             />
           </div>
-
-          <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img
-              src="https://media.istockphoto.com/id/1146925274/photo/teacher-helping-schoolgirl-with-writing.webp?b=1&s=170667a&w=0&k=20&c=7YET8X1idxlil_U-nyfqdmR1HNTvKnSmDCESjvd2Kmw="
-              className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              alt="..."
-            />
-          </div>
+          {/* <div
+            className="flex flex-row duration-500 ease transition-all"
+            data-carousel-item
+          >
+            <img src="Nike.png" className="w-1/4 p-2" alt="..." />
+            <img src="Apple.png" className=" w-1/4 p-2" alt="..." />
+            <img src="Lego.png" className="block w-1/4 p-2 " alt="..." />
+            <img src="Rolex.png" className="  block  w-1/4 p-2 " alt="..." />
+          </div> */}
         </div>
 
         <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">

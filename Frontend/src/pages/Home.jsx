@@ -12,6 +12,7 @@ import FeedBack from "@/components/FeedBack";
 import Contact from "@/components/Contact";
 import Information from "@/components/Information";
 import Componies from "@/components/Componies";
+import Categories from "./Categories";
 
 // const navigation = [
 //   { name: "Categories", href: "#" },
@@ -29,6 +30,7 @@ export default function Home() {
       <HomeSection />
       <Information />
       <Componies />
+      <Categories />
       <Plans />
       <FeedBack />
       <About />
