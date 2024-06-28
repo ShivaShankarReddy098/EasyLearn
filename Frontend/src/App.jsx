@@ -9,6 +9,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
 import ForgetPassword from "./utils/ForgetPassword";
+import CourseDetail from "./pages/CourseDetail";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,7 +21,14 @@ const router = createBrowserRouter([
       },
       {
         path: "/categories",
-        element: <Categories />,
+        // element: <Categories />,
+        element: <CourseDetail />,
+        // children: [
+        //   {
+        //     path: "/categories/:id",
+        //     element: <CourseDetail />,
+        //   },
+        // ],
         // loader: () => {},
       },
       {

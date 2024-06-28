@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const CATEGORIES = [
   {
@@ -67,7 +67,7 @@ const COURSES = [
       count: "328,000",
       stars: "⭐⭐⭐⭐⭐",
     },
-    amount: "15",
+    amount: "1599",
   },
   {
     id: "2",
@@ -79,7 +79,7 @@ const COURSES = [
       count: "128,000",
       stars: "⭐⭐⭐",
     },
-    amount: "7",
+    amount: "749",
   },
   {
     id: "3",
@@ -91,7 +91,7 @@ const COURSES = [
       count: "118,000",
       stars: "⭐⭐⭐⭐",
     },
-    amount: "8",
+    amount: "899",
   },
   {
     id: "4",
@@ -103,7 +103,7 @@ const COURSES = [
       count: "228,000",
       stars: "⭐⭐⭐⭐",
     },
-    amount: "9",
+    amount: "949",
   },
   {
     id: "5",
@@ -115,7 +115,7 @@ const COURSES = [
       count: "38,000",
       stars: "⭐⭐⭐⭐",
     },
-    amount: "6",
+    amount: "601",
   },
   {
     id: "6",
@@ -127,7 +127,7 @@ const COURSES = [
       count: "298,000",
       stars: "⭐⭐⭐⭐",
     },
-    amount: "12",
+    amount: "1200",
   },
   {
     id: "7",
@@ -139,7 +139,7 @@ const COURSES = [
       count: "98,000",
       stars: "⭐⭐⭐⭐⭐",
     },
-    amount: "13",
+    amount: "1359",
   },
   {
     id: "8",
@@ -151,7 +151,7 @@ const COURSES = [
       count: "111,059",
       stars: "⭐⭐⭐⭐",
     },
-    amount: "11",
+    amount: "1199",
   },
   {
     id: "9",
@@ -163,13 +163,13 @@ const COURSES = [
       count: "398,242",
       stars: "⭐⭐⭐⭐⭐",
     },
-    amount: "16",
+    amount: "1649",
   },
 ];
 function Categories() {
   return (
     <>
-      <div className=" p-10 lg:mt-10 mb-10">
+      <div className=" p-10 lg:mt-10 mb-10 ">
         <div>
           <h1 className="font-bold text-3xl font-mono">
             All the skills you need in one place
@@ -187,9 +187,9 @@ function Categories() {
                   key={course.id}
                   className=" text-teal-500 hover:text-slate-800 first:text-slate-800 hover:-translate-y-1 transition-all"
                 >
-                  <Link className="" to={`/categories/${course.name}`}>
+                  <NavLink className="" to={`/categories/${course.name}`}>
                     {course.name}
-                  </Link>
+                  </NavLink>
                 </li>
               );
             })}
@@ -219,7 +219,7 @@ function Categories() {
                     className="hover:translate-y-3 transition-all"
                   >
                     <div>
-                      <Link to="#">
+                      <Link to={`/categories/${course.id}`}>
                         <img src={course.link} />
                       </Link>
                     </div>
@@ -230,7 +230,7 @@ function Categories() {
                       <p>{course.rating.stars}</p>
                       <p>({course.rating.count})</p>
                     </div>
-                    <p className="font-semibold">${course.amount}</p>
+                    <p className="font-semibold">₹{course.amount}</p>
                     <button className=" bg-blue-400 hover:bg-blue-500 p-2 font-semibold text-white rounded-lg text-center text-sm mt-1">
                       ADD TO CART
                     </button>
